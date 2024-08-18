@@ -1,0 +1,142 @@
+@import "fonts";
+
+:root {
+  --dark-color: #000000;
+  --light-color: #FFFFFF;
+  --primary-color: #AE7AFF;
+  --gray-color: #5F646D;
+  --dark-hover-color: #161616;
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  font-family: 'JetBrains Mono', sans-serif;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.skill-tags {
+  padding: 0 8px;
+  border-radius: 4px;
+  border: solid 1px var(--light-color);
+  display: inline;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-right: 4px;
+  height: 24px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+medium-text {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.regular {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.t-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.t-input {
+  width: 440px;
+  margin-top: 8px;
+  display: block;
+  box-sizing: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  background: var(--dark-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--light-color);
+  font-family: 'JetBrains Mono', sans-serif;
+}
+
+.t-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+}
+
+.t-form-label__text {
+  font-size: 12px;
+  line-height: 16px;
+  font-style: normal;
+  font-weight:500;
+  color: var(--light-transparent-color);
+}
+
+.t-form-input {
+
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  background: none;
+  color: var(--light-color);
+  border-bottom: 1px solid var(--light-color);
+  height: 33px;
+
+  &:focus-visible {
+    outline: 1px solid var(--primary-color);
+  }
+}
+

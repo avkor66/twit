@@ -1,0 +1,54 @@
+<img
+  src="/assets/images/twitter.svg"
+  alt="logo"
+  class="sidebar-logo"
+>
+
+<nav>
+  <ul class="main-menu-list">
+    <li *ngFor="let menuItem of menuItems">
+      <a
+        class="menu-item"
+        [routerLink]="[menuItem.link]"
+        routerLinkActive="active"
+      >
+        <svg class="svg-menu" [icon]="menuItem.icon"></svg>
+        <span>{{ menuItem.label }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<p class="medium-text">Подписчики</p>
+
+@for (profile of subscribers$ | async; track profile.id) {
+
+  <app-subscriber-card
+    [profile]="profile"
+  ></app-subscriber-card>
+}
+
+
+<div class="to-subscribers">
+  <a
+    [routerLink]="['/subscribers']"
+    class="to-subscribers-link medium-text"
+  >Все подписчики</a>
+  <svg icon="arrow" class="to-subscribers-icon"></svg>
+</div>
+
+<footer class="sidebar__footer">
+  @if (me(); as me) {
+    @if (me.avatarUrl) {
+      <img [src]="me.avatarUrl | imgUrl " alt="">
+    } @else {
+      <img src="/assets/images/avatar/png/boy.png" alt="">
+    }
+
+    <div class="medium-text username-text">{{ me.username }}</div>
+
+    <a [routerLink]="['settings']" class="settings-btn">
+      <svg icon="settings"></svg>
+    </a>
+  }
+</footer>
